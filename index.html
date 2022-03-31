@@ -21,7 +21,7 @@
           <img :src="slideshowImages[currentIndex]" alt="slideshow images">
         </div>
         <div id="dots">
-          <a href="#" :class="(slideshowImages[currentIndex] == i) ? 'active' : ''" v-for="(elm, i) in slideshowImages"><i class="fa-solid fa-circle"></i></a>
+          <a href="#" :class="(currentIndex == i) ? 'active' : ''" v-for="(elm, i) in slideshowImages"><i class="fa-solid fa-circle"></i></a>
         </div>
       </div>
       <div class="arrow">
