@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Slideshow</title>
+</head>
+<body>
+
+  <div id="root">
+    <div id="slideshow">
+      <div class="arrow">
+        <a class="prev" @click="prev" href="#">&#10094;</a>
+      </div>
+      <div id="images">
+        <div >
+          <img :src="slideshowImages[0]" alt="slideshow images">
+        </div>
+        <div id="dots">
+          <a href="#" @click=""><i class="fa-solid fa-circle"></i></a>
+          <a href="#" @click=""><i class="fa-solid fa-circle"></i></a>
+          <a href="#" @click=""><i class="fa-solid fa-circle"></i></a>
+          <a href="#" @click=""><i class="fa-solid fa-circle"></i></a>
+        </div>
+      </div>
+      <div class="arrow">
+        <a class="next" @click="next" href="#">&#10095;</a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html>
