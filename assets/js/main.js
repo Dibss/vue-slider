@@ -13,10 +13,10 @@ var app = new Vue({
   el : "#root",
   data : {
     slideshowImages : [
-      "https://unsplash.it/1000/600?image=28",
-      "https://unsplash.it/1000/600?image=70",
-      "https://unsplash.it/1000/600?image=53",
-      "https://unsplash.it/1000/600?image=67",
+      "https://unsplash.it/900/500?image=28",
+      "https://unsplash.it/900/500?image=70",
+      "https://unsplash.it/900/500?image=53",
+      "https://unsplash.it/900/500?image=67",
     ],
     timer: null,
     currentIndex: 0
@@ -29,7 +29,7 @@ var app = new Vue({
     },
 
     dots: function(){
-      
+
     },
     
     timerSlide: function() {
