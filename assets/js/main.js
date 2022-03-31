@@ -13,8 +13,14 @@ var app = new Vue({
     currentIndex: 0
   },
   methods : {
-    dots: function(){
-      
+    timerSlide: function(){
+      this.timer = setInterval(this.next, 3000);
+    },
+
+    dots: function(i){
+      this.currentIndex = i;
+      clearInterval(this.timer);
+      this.timerSlide();
     },
 
     next: function() {
@@ -35,6 +41,6 @@ var app = new Vue({
   },
 
   mounted() {
-    this.timer = setInterval(this.next, 3000);
+    this.timerSlide();
   }
 });

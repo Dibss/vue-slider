@@ -23,10 +23,11 @@
 }
 
 #dots{position: absolute; background-color: rgba(0, 0, 0, 0.7); border-radius: 50rem; margin-bottom: 1em;}
-#dots i{margin: 0.8em; color: var(--dots-color); padding: 0.5em;}
+#dots i{margin: 0.8em; padding: 0.5em;}
 
 .arrow{font-size: 2rem;}
 
 a{text-decoration: none; color: var(--link-color);}
 
+.no-active{color: var(--dots-color);}
 .active{color: #131dfd;}
