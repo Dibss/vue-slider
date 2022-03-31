@@ -16,20 +16,19 @@ var app = new Vue({
       "https://unsplash.it/900/500?image=28",
       "https://unsplash.it/900/500?image=70",
       "https://unsplash.it/900/500?image=53",
-      "https://unsplash.it/900/500?image=67",
+      "https://unsplash.it/900/500?image=67"
     ],
+    dot : '<a href="#"><i class="fa-solid fa-circle"></i></a>',
     timer: null,
     currentIndex: 0
   },
   methods : {
     currentImg : function(){
-      for(let i = 0; i < this.slideshowImages.length; i++)
-      this.slideshowImages[i] = this.currentIndex;
-      return this.currentIndex;
+      this.currentIndex = i;
     },
 
     dots: function(){
-
+      
     },
     
     timerSlide: function() {
@@ -38,10 +37,12 @@ var app = new Vue({
 
     next: function() {
       this.currentIndex += 1;
+      return this.currentIndex;
     },
 
     prev: function() {
       this.currentIndex -= 1;
+      return this.currentIndex;
     },
   }
 });

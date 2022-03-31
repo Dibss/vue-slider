@@ -28,3 +28,5 @@
 .arrow{font-size: 2rem;}
 
 a{text-decoration: none; color: var(--link-color);}
+
+.active{color: #131dfd;}
