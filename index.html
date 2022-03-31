@@ -14,18 +14,18 @@
   <div id="root">
     <div id="slideshow">
       <div class="arrow">
-        <a class="prev" @click="prev" href="#">&#10094;</a>
+        <a class="prev" @click="prev()" href="#">&#10094;</a>
       </div>
       <div id="images">
         <div >
-          <img :src="slideshowImages[0]" alt="slideshow images">
+          <img :src="slideshowImages[currentIndex]" alt="slideshow images">
         </div>
-        <div id="dots" v-for="">
-          
+        <div id="dots">
+          <a href="#" :class="(slideshowImages[currentIndex] == i) ? 'active' : ''" v-for="(elm, i) in slideshowImages"><i class="fa-solid fa-circle"></i></a>
         </div>
       </div>
       <div class="arrow">
-        <a class="next" @click="next" href="#">&#10095;</a>
+        <a class="next" @click="next()" href="#">&#10095;</a>
       </div>
     </div>
   </div>

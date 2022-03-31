@@ -18,15 +18,10 @@ var app = new Vue({
       "https://unsplash.it/900/500?image=53",
       "https://unsplash.it/900/500?image=67"
     ],
-    dot : '<a href="#"><i class="fa-solid fa-circle"></i></a>',
     timer: null,
     currentIndex: 0
   },
   methods : {
-    currentImg : function(){
-      this.currentIndex = i;
-    },
-
     dots: function(){
       
     },
@@ -36,13 +31,19 @@ var app = new Vue({
     },
 
     next: function() {
-      this.currentIndex += 1;
-      return this.currentIndex;
+      if (this.currentIndex < this.slideshowImages.length - 1){
+        this.currentIndex += 1;
+      } else {
+        this.currentIndex = 0;
+      }
     },
 
     prev: function() {
-      this.currentIndex -= 1;
-      return this.currentIndex;
+      if(this.currentIndex == 0){
+        this.currentIndex = this.slideshowImages.length - 1;
+      } else {
+        this.currentIndex -= 1;
+      }
     },
   }
 });
